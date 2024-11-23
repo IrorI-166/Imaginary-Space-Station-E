@@ -14,7 +14,7 @@ import { createUser } from "@/lib/models/userModel";
 export async function POST(req: NextRequest): Promise<NextResponse> {
     try {
         // リクエストのボディからemailとpasswordを取得
-        const { email, password } = await req.json();;
+        const { email, password } = await req.json();
 
         // 必須項目の確認
         if (!email || !password) {
