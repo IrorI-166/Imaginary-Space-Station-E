@@ -5,6 +5,7 @@
 */
 //各モジュールのインポート
 import jwt from "jsonwebtoken";
+//NextJSにおけるHTTPリクエスト、レスポンスオブジェクトのインポート
 import type { NextApiRequest, NextApiResponse } from "next";
 //Redisクライアントのインポート
 import { client } from "@/lib/config/redisClient"
