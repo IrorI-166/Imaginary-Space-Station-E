@@ -13,6 +13,13 @@ import { client } from "@/lib/config/redisClient"
 client.on("connect", () => console.log("Connected to Redis by Middleware"));
 client.on("error", (err) => console.error("Redis error:", err));
 
+// 型拡張：NextApiRequest に userId を追加
+declare module "next" {
+    interface NextApiRequest {
+        userId?: string;
+    }
+}
+
 // JWT トークンを非同期で検証するヘルパー関数
 const verifyToken = (token: string): Promise<any> => {
     return new Promise((resolve, reject) => {
@@ -30,7 +37,7 @@ const verifyToken = (token: string): Promise<any> => {
 export const authMiddleware = async (
     req: NextApiRequest,
     res: NextApiResponse
-) => {
+): Promise<void | NextApiResponse> => {
     try {
         // リクエストメソッドの検証
         if (req.method !== "GET") {
@@ -50,7 +57,7 @@ export const authMiddleware = async (
 
         // トークンの有効性を検証
         // JWT トークンを検証
-        const decoded = await verifyToken(token, process.env.JWT_SECRET);
+        const decoded = await verifyToken(token);
         console.log("Decoded JWT payload:", decoded);
 
         // Redis クライアントが閉じている場合は再接続を試みる
