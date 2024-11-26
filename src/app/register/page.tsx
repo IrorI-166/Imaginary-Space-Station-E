@@ -1,11 +1,18 @@
 //src/app/register/page.tsx
 
+//クライアントサイドで使用することを定義
+"use client";
+
 import AccountAuthForm from "@/components/AccountAuthForm";
 
 export default function RegisterPage() {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-200">
-            <AccountAuthForm action="/api/auth/register" buttonLabel="Register" />
-        </div>
+        <AccountAuthForm
+            action="/api/auth/register"
+            buttonLabel="Register"
+            onSuccess={(response) => console.log("Success:", response)
+            }
+            onError={(error) => console.error("Error:", error)}
+        />
     );
 }
