@@ -34,7 +34,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         // ユーザーが見つからない場合、エラーレスポンスを返す
         if (!user) {
             return NextResponse.json(
-                { error: "Invalid credentials" },
+                { error: "Invalid credentials, Empty search results by Email" },
                 { status: 401 }
             );
         }

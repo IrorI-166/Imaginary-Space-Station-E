@@ -5,15 +5,15 @@ Redis接続モジュールの定義とそのエクスポート
 */
 
 //Redisのインポート
-import redis from "redis";
+import { createClient } from "redis";
 
 //環境変数からRedisURLをロード
-const redisURL = process.env.REDIS_URL;
+const redisURL = process.env.REDIS_URL || "redis://localhost:6379";
 if (!redisURL) {
     throw new Error("Missing environment variable: REDIS_URL");
 }
 
-export const client = redis.createClient({
+export const client = createClient({
     url: redisURL
 });
 
