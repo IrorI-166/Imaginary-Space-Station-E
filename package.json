@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^15.0.3",
+    "@tailwindcss/forms": "^0.5.9",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.36.3",
