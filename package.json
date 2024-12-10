@@ -11,6 +11,13 @@
     "drizzle:push": "npx drizzle-kit push",
     "drizzle:drop": "npx drizzle-kit drop"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "czConfig": "commitlint.config.js",
+      "useEmoji": true
+    }
+  },
   "dependencies": {
     "@next/eslint-plugin-next": "^15.0.3",
     "@tailwindcss/forms": "^0.5.9",
@@ -32,6 +39,7 @@
     "@types/pg": "^8.11.10",
     "@types/react": "18.3.12",
     "autoprefixer": "^10.4.20",
+    "cz-git": "^1.11.0",
     "drizzle-kit": "^0.28.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
