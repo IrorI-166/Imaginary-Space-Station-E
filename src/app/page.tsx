@@ -8,7 +8,7 @@ export default function Home() {
             <div className="fixed top-0 left-0 w-64">
                 <aside id="default-sidebar" className="h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
                     <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-                        <ul className="space-y-2 font-medium">
+                        <ul className="space-y-2">
                             <li>
                                 <a
                                     href="#"
@@ -47,18 +47,18 @@ export default function Home() {
             {/* TODO:Make right sidebar menu */}
             {/* Right sidebar component */}
             <div className="fixed right-0 w-[287px] bg-slate-200">
-                <aside id="default-sidebar" className="h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-                    <div className="h-full px-3 py-4 overflow-y-auto dark:bg-gray-800">
-                        <ul className="space-y-2 font-medium">
-                            <li>
-                                <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <span className="material-symbols-outlined text-gray-900 ms-3">home</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-        </div>
+                <div id="Serchbox" className="flex items-center justify-center">
+                    <span className="material-symbols-outlined">
+                        search
+                    </span>
+                    <input type="text" placeholder="search..." />
+                    <button>
+                        <span className="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </button>
+                </div>
+            </div >
+        </div >
     );
 }

@@ -5,9 +5,12 @@
 @tailwind utilities;
 
 .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
     font-variation-settings:
         'FILL' 1,
-        'wght' 300,
+        'wght' 400,
         'GRAD' 0,
-        'opsz' 24
+        'opsz' 48;
+    display: inline-block;
+    line-height: 1;
 }
