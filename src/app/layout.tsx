@@ -1,10 +1,3 @@
-//src/app/layout.tsx
-
-/*
-App Routerにおける共通レイアウトの定義
-指定された階層以下のすべてのページに適用される
-*/
-
 import '../styles/globals.css';
 
 export const metadata = {

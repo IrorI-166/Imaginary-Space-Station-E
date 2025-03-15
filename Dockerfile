@@ -1,23 +1,23 @@
-# ベースイメージとして Node.js を使用
-FROM node:18-alpine
+# ベースイメージとして Bun.JS を使用
+FROM oven/bun:1 AS base
 
 # 作業ディレクトリを設定
 WORKDIR /app
 
 # 必要なファイルをコピー
-COPY package.json package-lock.json ./
+COPY package.json bun.lock ./
 
 # 依存関係をインストール
-RUN npm install
+RUN bun install
 
 # アプリケーションのソースコードをコピー
 COPY . .
 
 # Next.js アプリをビルド
-RUN npm run build
+RUN bun run build
 
 # ポートを公開
 EXPOSE 3000
 
 # アプリケーションを起動
-CMD ["npm", "start"]
+CMD ["bun", "start"]
