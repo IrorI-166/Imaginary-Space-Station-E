@@ -1,8 +1,5 @@
 //src/app/page.tsx
 
-//import
-import DisplayPost from "@/components/DisplayPost";
-
 //Homeページを定義、エクスポート
 export default function Home() {
     return (
@@ -45,8 +42,7 @@ export default function Home() {
                     <h1>Here is the main position</h1>
                 </div>
                 <h1>Welcome to Imaginary Space Station</h1>
-                <p>Your app is running successfully!</p>
-                <DisplayPost />
+                <h1>Show Users Timeline here</h1>
             </div>
             {/* TODO:Make right sidebar menu */}
             {/* Right sidebar component */}
