@@ -1,6 +1,3 @@
-//src/app/register/page.tsx
-
-//クライアントサイドで使用することを定義
 "use client";
 
 import AccountAuthForm from "@/components/AccountAuthForm";

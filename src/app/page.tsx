@@ -1,6 +1,3 @@
-//src/app/page.tsx
-
-//Homeページを定義、エクスポート
 export default function Home() {
     return (
         <div className="isolate flex">
