@@ -1,3 +1,9 @@
+//src/app/page.tsx
+
+//import
+import DisplayPost from "@/components/DisplayPost";
+
+//Homeページを定義、エクスポート
 export default function Home() {
     return (
         <div className="isolate flex">
@@ -40,17 +46,19 @@ export default function Home() {
                 </div>
                 <h1>Welcome to Imaginary Space Station</h1>
                 <p>Your app is running successfully!</p>
+                <DisplayPost />
             </div>
             {/* TODO:Make right sidebar menu */}
             {/* Right sidebar component */}
             <div className="fixed right-0 w-[287px] bg-slate-200">
-                <div id="Serchbox" className="flex items-center justify-center">
-                    <span className="material-symbols-outlined">
+                {/* TODO:Make the layout of search box */}
+                <div id="Serchbox" className="relative">
+                    <span className="material-symbols-outlined absolute inset-y-0 left-0">
                         search
                     </span>
-                    <input type="text" placeholder="search..." />
+                    <input type="text" placeholder="search..." className="rounded-full focus:outline-none" />
                     <button>
-                        <span className="material-symbols-outlined">
+                        <span className="material-symbols-outlined absolute right-0 top-0">
                             arrow_forward
                         </span>
                     </button>
